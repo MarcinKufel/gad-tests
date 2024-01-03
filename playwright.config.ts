@@ -12,9 +12,9 @@ export default defineConfig({
   reporter: "html",
   use: {
     actionTimeout: 0,
-    trace: 'retain-on-failure',
-    video: 'retain-on-failure',
-    screenshot: 'only-on-failure'
+    trace: "retain-on-failure",
+    video: "retain-on-failure",
+    screenshot: "only-on-failure",
   },
   projects: [
     {
