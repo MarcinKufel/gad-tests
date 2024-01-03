@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable playwright/no-useless-not */
 import { test, expect, type Page } from "@playwright/test";
 
 test.beforeEach(async ({ page }) => {
@@ -213,7 +215,7 @@ test.describe("Editing", () => {
   test("should hide other controls when editing", async ({ page }) => {
     const todoItem = page.getByTestId("todo-item").nth(1);
     await todoItem.dblclick();
-    await expect(todoItem.getByRole("checkbox")).not.toBeVisible();
+    await expect(todoItem.getByRole("checkbox")).toBeHidden();
     await expect(
       todoItem.locator("label", {
         hasText: TODO_ITEMS[1],
@@ -451,6 +453,7 @@ test.describe("Routing", () => {
   });
 });
 
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 async function createDefaultTodos(page: Page) {
   // create a new todo locator
   const newTodo = page.getByPlaceholder("What needs to be done?");
@@ -461,12 +464,14 @@ async function createDefaultTodos(page: Page) {
   }
 }
 
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 async function checkNumberOfTodosInLocalStorage(page: Page, expected: number) {
   return await page.waitForFunction((e) => {
     return JSON.parse(localStorage["react-todos"]).length === e;
   }, expected);
 }
 
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 async function checkNumberOfCompletedTodosInLocalStorage(
   page: Page,
   expected: number,
@@ -480,6 +485,7 @@ async function checkNumberOfCompletedTodosInLocalStorage(
   }, expected);
 }
 
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 async function checkTodosInLocalStorage(page: Page, title: string) {
   return await page.waitForFunction((t) => {
     return JSON.parse(localStorage["react-todos"])
