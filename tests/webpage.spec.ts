@@ -4,7 +4,7 @@ import { CommentsPage } from "../src/pages/comments.page";
 import { HomePage } from "../src/pages/home.page";
 
 test.describe("Verify service main pages", () => {
-  test("has page title", async ({ page }) => {
+  test("has page title @GAD-R01-01", async ({ page }) => {
     // Arrange
     const homePage = new HomePage(page);
     // Act
@@ -15,7 +15,7 @@ test.describe("Verify service main pages", () => {
     expect(title).toContain("GAD");
   });
 
-  test("articles page title", async ({ page }) => {
+  test("articles page title @GAD-R01-02", async ({ page }) => {
     // Arrange
     const articlesPage = new ArticlesPage(page);
     // Act
@@ -26,7 +26,7 @@ test.describe("Verify service main pages", () => {
     expect(title).toContain("Articles");
   });
 
-  test("comments page title", async ({ page }) => {
+  test("comments page title @GAD-R01-02", async ({ page }) => {
     // Arrange
     const commentsPage = new CommentsPage(page);
     // Act
