@@ -1,11 +1,12 @@
 import { expect, test } from "@playwright/test";
 import { WelcomePage } from "../../src/pages/welcome.page";
 import { LoginPage } from "../../src/pages/login.page";
+import { testUser1 } from "../../src/test-data/user.data";
 
 test.describe("Verify login", () => {
   test("login with correct credentials @GAD_R02_01", async ({ page }) => {
     // Arrange
-    const userEmail = "Moses.Armstrong@Feest.ca";
+    const userEmail = testUser1.userEmail;
     const userPassword = "test1";
     const loginPage = new LoginPage(page);
     // Act
