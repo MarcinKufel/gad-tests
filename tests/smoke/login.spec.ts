@@ -4,10 +4,10 @@ import { LoginPage } from "../../src/pages/login.page";
 import { testUser1 } from "../../src/test-data/user.data";
 
 test.describe("Verify login", () => {
-  test("login with correct credentials @GAD_R02_01", async ({ page }) => {
+  test("login with correct credentials @GAD-R02-01", async ({ page }) => {
     // Arrange
     const userEmail = testUser1.userEmail;
-    const userPassword = "test1";
+    const userPassword = testUser1.userPassword;
     const loginPage = new LoginPage(page);
     // Act
     await loginPage.goto();
