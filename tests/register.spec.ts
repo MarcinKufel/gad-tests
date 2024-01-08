@@ -1,9 +1,9 @@
 import { faker } from "@faker-js/faker";
 import { expect, test } from "@playwright/test";
+import { RegisterUser } from "../src/models/user.model";
 import { LoginPage } from "../src/pages/login.page";
 import { RegisterPage } from "../src/pages/register.page";
 import { WelcomePage } from "../src/pages/welcome.page";
-import { RegisterUser } from "../src/models/user.model";
 
 test.describe("Verify register", () => {
   test("register with correct data and login @GAD-R03-01 @GAD-R03-02 @GAD-R03-03", async ({
@@ -53,10 +53,10 @@ test.describe("Verify register", () => {
     expect.soft(titleLogin).toContain("Login");
 
     // Assert
-    await loginPage.login(
-      registerUserData.userEmail,
-      registerUserData.userPassword,
-    );
+    await loginPage.login({
+      userEmail: registerUserData.userEmail,
+      userPassword: registerUserData.userPassword,
+    });
 
     const welcomePage = new WelcomePage(page);
     const titleWelcome = await welcomePage.title();
