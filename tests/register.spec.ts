@@ -1,3 +1,4 @@
+import { faker } from "@faker-js/faker";
 import { expect, test } from "@playwright/test";
 import { LoginPage } from "../src/pages/login.page";
 import { RegisterPage } from "../src/pages/register.page";
@@ -8,10 +9,14 @@ test.describe("Verify register", () => {
     page,
   }) => {
     // Arrange
-    const userFirstName = "Janina";
-    const userLastName = "Nowak";
-    const userEmail = `jntest${new Date().getTime()}@test.test1`;
-    const userPassword = "testtest234";
+    const userFirstName = faker.person.firstName();
+    const userLastName = faker.person.lastName();
+    //  const userEmail = `jntest${new Date().getTime()}@test.test1`;
+    const userEmail = faker.internet.email({
+      firstName: userFirstName,
+      lastName: userLastName,
+    });
+    const userPassword = faker.internet.password();
 
     const registerPage = new RegisterPage(page);
 
