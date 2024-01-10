@@ -4,17 +4,17 @@ import { ArticlePage } from "../src/pages/article.page";
 import { ArticlesPage } from "../src/pages/articles.page";
 import { LoginPage } from "../src/pages/login.page";
 import { testUser1 } from "../src/test-data/user.data";
-import { AddArticlesView } from "../src/views/add-article.view";
+import { AddArticleView } from "../src/views/add-article.view";
 
 test.describe("Verify articles", () => {
   let loginPage: LoginPage;
   let articlesPage: ArticlesPage;
-  let addArticleView: AddArticlesView;
+  let addArticleView: AddArticleView;
 
   test.beforeEach(async ({ page }) => {
     loginPage = new LoginPage(page);
     articlesPage = new ArticlesPage(page);
-    addArticleView = new AddArticlesView(page);
+    addArticleView = new AddArticleView(page);
 
     await loginPage.goto();
     await loginPage.login(testUser1);
@@ -22,6 +22,24 @@ test.describe("Verify articles", () => {
 
     await articlesPage.addArticleButtonLogged.click();
     await expect.soft(addArticleView.header).toBeVisible();
+  });
+
+  test("user can access single article @GAD-R04-03", async ({ page }) => {
+    // Arrange
+    const articlePage = new ArticlePage(page);
+
+    const articleData = randomNewArticle();
+
+    await addArticleView.createArticle(articleData);
+    await articlesPage.goto();
+
+    // Act
+    await page.getByText(articleData.title).click();
+    // Assert
+    await expect.soft(articlePage.articleTitle).toHaveText(articleData.title);
+    await expect
+      .soft(articlePage.articleBody)
+      .toHaveText(articleData.body, { useInnerText: true });
   });
   test("create new article @GAD-R04-01", async ({ page }) => {
     // Arrange
