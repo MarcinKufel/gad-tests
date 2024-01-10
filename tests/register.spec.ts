@@ -1,13 +1,13 @@
 import { expect, test } from "@playwright/test";
 import { randomUserData } from "../src/factories/user.factory";
-import { RegisterUser } from "../src/models/user.model";
+import { RegisterUserModel } from "../src/models/user.model";
 import { LoginPage } from "../src/pages/login.page";
 import { RegisterPage } from "../src/pages/register.page";
 import { WelcomePage } from "../src/pages/welcome.page";
 
 test.describe("Verify register", () => {
   let registerPage: RegisterPage;
-  let registerUserData: RegisterUser;
+  let registerUserData: RegisterUserModel;
   test.beforeEach(async ({ page }) => {
     registerPage = new RegisterPage(page);
     registerUserData = randomUserData();

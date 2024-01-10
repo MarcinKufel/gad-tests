@@ -1,6 +1,6 @@
 import { Page } from "@playwright/test";
+import { RegisterUserModel } from "../models/user.model";
 import { BasePage } from "./base.page";
-import { RegisterUser } from "../models/user.model";
 
 export class RegisterPage extends BasePage {
   url = "/register.html";
@@ -19,7 +19,7 @@ export class RegisterPage extends BasePage {
     super(page);
   }
 
-  async register(registerUserData: RegisterUser): Promise<void> {
+  async register(registerUserData: RegisterUserModel): Promise<void> {
     await this.userFirstNameInput.fill(registerUserData.userFirstName);
     await this.userLastNameInput.fill(registerUserData.userLastName);
     await this.userEmailInput.fill(registerUserData.userEmail);
