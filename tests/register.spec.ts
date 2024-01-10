@@ -1,5 +1,5 @@
 import { expect, test } from "@playwright/test";
-import { randomUserData } from "../src/factories/user.factory";
+import { prepareRandomUser } from "../src/factories/user.factory";
 import { RegisterUserModel } from "../src/models/user.model";
 import { LoginPage } from "../src/pages/login.page";
 import { RegisterPage } from "../src/pages/register.page";
@@ -10,7 +10,7 @@ test.describe("Verify register", () => {
   let registerUserData: RegisterUserModel;
   test.beforeEach(async ({ page }) => {
     registerPage = new RegisterPage(page);
-    registerUserData = randomUserData();
+    registerUserData = prepareRandomUser();
     await registerPage.goto();
   });
   test("register with correct data and login @GAD-R03-01 @GAD-R03-02 @GAD-R03-03", async ({
