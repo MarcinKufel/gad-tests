@@ -2,7 +2,7 @@ import { Page } from "@playwright/test";
 import { AddArticleModel } from "../models/article.model";
 
 export class AddArticleView {
-  header = this.page.getByRole("heading", { name: "Add New Entry" });
+  addNewHeader = this.page.getByRole("heading", { name: "Add New Entry" });
   titleInput = this.page.getByTestId("title-input");
   bodyInput = this.page.getByTestId("body-text");
   saveButton = this.page.getByTestId("save");
