@@ -1,4 +1,5 @@
 import { Page } from "@playwright/test";
+import { AddCommentModel } from "../models/comment.model";
 
 export class AddCommentView {
   addNewHeader = this.page.getByRole("heading", { name: "Add New Comment" });
@@ -6,4 +7,9 @@ export class AddCommentView {
   saveButton = this.page.getByRole("button", { name: "Save" });
 
   constructor(private page: Page) {}
+
+  async createComment(commentData: AddCommentModel): Promise<void> {
+    await this.bodyInput.fill(commentData.body);
+    await this.saveButton.click();
+  }
 }
