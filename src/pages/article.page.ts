@@ -1,6 +1,6 @@
 import { MainMenuComponent } from "@_src/components/main-menu.component";
+import { BasePage } from "@_src/pages/base.page";
 import { Locator, Page } from "@playwright/test";
-import { BasePage } from "./base.page";
 
 interface ArticleComment {
   body: Locator;

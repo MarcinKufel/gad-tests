@@ -1,6 +1,6 @@
 import { LoginUserModel } from "@_src/models/user.model";
+import { BasePage } from "@_src/pages/base.page";
 import { Page } from "@playwright/test";
-import { BasePage } from "./base.page";
 
 export class LoginPage extends BasePage {
   url = "/login/";

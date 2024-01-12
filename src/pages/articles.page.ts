@@ -1,6 +1,6 @@
 import { MainMenuComponent } from "@_src/components/main-menu.component";
+import { BasePage } from "@_src/pages/base.page";
 import { Page } from "@playwright/test";
-import { BasePage } from "./base.page";
 
 export class ArticlesPage extends BasePage {
   url = "/articles.html";
