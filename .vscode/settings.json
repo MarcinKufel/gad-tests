@@ -4,5 +4,6 @@
   "editor.codeActionsOnSave": {
     "source.organizeImports": "explicit"
   },
-  "cSpell.words": ["Marcin"]
+  "cSpell.words": ["Marcin"],
+  "typescript.preferences.importModuleSpecifier": "non-relative"
 }
