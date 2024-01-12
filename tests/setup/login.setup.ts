@@ -4,7 +4,7 @@ import { testUser1 } from "@_src/test-data/user.data";
 import { expect, test as setup } from "@playwright/test";
 import { STORAGE_STATE } from "@_pw-config";
 
-setup("login with correct credentials", async ({ page }) => {
+setup("login and save session", async ({ page }) => {
   // Arrange
   const expectedWelcomeTitle = "Welcome";
   const loginPage = new LoginPage(page);
