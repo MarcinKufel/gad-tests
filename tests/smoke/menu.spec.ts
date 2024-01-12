@@ -1,7 +1,7 @@
+import { ArticlesPage } from "@_src/pages/articles.page";
+import { CommentsPage } from "@_src/pages/comments.page";
+import { HomePage } from "@_src/pages/home.page";
 import { expect, test } from "@playwright/test";
-import { ArticlesPage } from "../../src/pages/articles.page";
-import { CommentsPage } from "../../src/pages/comments.page";
-import { HomePage } from "../../src/pages/home.page";
 
 test.describe("Verify menu main buttons", () => {
   test("comments button navigates to comment page @GAD_R01_03", async ({

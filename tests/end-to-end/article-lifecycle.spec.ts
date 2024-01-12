@@ -1,9 +1,9 @@
+import { prepareRandomArticle } from "@_src/factories/article.factory";
+import { AddArticleModel } from "@_src/models/article.model";
+import { ArticlePage } from "@_src/pages/article.page";
+import { ArticlesPage } from "@_src/pages/articles.page";
+import { AddArticleView } from "@_src/views/add-article.view";
 import { expect, test } from "@playwright/test";
-import { prepareRandomArticle } from "../../src/factories/article.factory";
-import { AddArticleModel } from "../../src/models/article.model";
-import { ArticlePage } from "../../src/pages/article.page";
-import { ArticlesPage } from "../../src/pages/articles.page";
-import { AddArticleView } from "../../src/views/add-article.view";
 
 test.describe.configure({ mode: "serial" });
 test.describe("Create, verify and delete article", () => {
