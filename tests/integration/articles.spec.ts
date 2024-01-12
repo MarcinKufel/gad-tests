@@ -1,8 +1,8 @@
 import { expect, test } from "@playwright/test";
-import { prepareRandomArticle } from "../src/factories/article.factory";
-import { ArticlePage } from "../src/pages/article.page";
-import { ArticlesPage } from "../src/pages/articles.page";
-import { AddArticleView } from "../src/views/add-article.view";
+import { prepareRandomArticle } from "../../src/factories/article.factory";
+import { ArticlePage } from "../../src/pages/article.page";
+import { ArticlesPage } from "../../src/pages/articles.page";
+import { AddArticleView } from "../../src/views/add-article.view";
 
 test.describe("Verify articles", () => {
   let articlesPage: ArticlesPage;
