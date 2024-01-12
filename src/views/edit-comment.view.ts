@@ -1,5 +1,5 @@
+import { AddCommentModel } from "@_src/models/comment.model";
 import { Page } from "@playwright/test";
-import { AddCommentModel } from "../models/comment.model";
 
 export class EditCommentView {
   bodyInput = this.page.locator("#body");

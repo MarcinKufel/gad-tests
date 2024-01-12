@@ -1,5 +1,5 @@
+import { LoginUserModel } from "@_src/models/user.model";
 import { Page } from "@playwright/test";
-import { LoginUserModel } from "../models/user.model";
 import { BasePage } from "./base.page";
 
 export class LoginPage extends BasePage {

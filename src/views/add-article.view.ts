@@ -1,5 +1,5 @@
+import { AddArticleModel } from "@_src/models/article.model";
 import { Page } from "@playwright/test";
-import { AddArticleModel } from "../models/article.model";
 
 export class AddArticleView {
   addNewHeader = this.page.getByRole("heading", { name: "Add New Entry" });
