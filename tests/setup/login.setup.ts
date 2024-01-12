@@ -2,7 +2,7 @@ import { LoginPage } from "@_src/pages/login.page";
 import { WelcomePage } from "@_src/pages/welcome.page";
 import { testUser1 } from "@_src/test-data/user.data";
 import { expect, test as setup } from "@playwright/test";
-import { STORAGE_STATE } from "../../playwright.config";
+import { STORAGE_STATE } from "@_pw-config";
 
 setup("login with correct credentials", async ({ page }) => {
   // Arrange
