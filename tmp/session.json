@@ -1,0 +1,75 @@
+{
+  "cookies": [
+    {
+      "name": "firstname",
+      "value": "Moses",
+      "domain": "localhost",
+      "path": "/",
+      "expires": 1705436004.184915,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "username",
+      "value": "Moses.Armstrong%40Feest.ca",
+      "domain": "localhost",
+      "path": "/",
+      "expires": 1705436004.185224,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "email",
+      "value": "Moses.Armstrong%40Feest.ca",
+      "domain": "localhost",
+      "path": "/",
+      "expires": 1705436004.185272,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "token",
+      "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Ik1vc2VzLkFybXN0cm9uZ0BGZWVzdC5jYSIsImRhdGEiOiJUQkQiLCJpYXQiOjE3MDU0MzI0MDQsImV4cCI6MTcwNTQzNjAwNH0.rMai6Mz7FidWdO57GaYocKg8dkgn2yXL0Qv1LRDyIUg",
+      "domain": "localhost",
+      "path": "/",
+      "expires": 1705436004.185304,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "expires",
+      "value": "1705436004181",
+      "domain": "localhost",
+      "path": "/",
+      "expires": 1705436004.185371,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "id",
+      "value": "1",
+      "domain": "localhost",
+      "path": "/",
+      "expires": 1705436004.185408,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "avatar",
+      "value": ".%5Cdata%5Cusers%5Cface_1591133479.7144732.jpg",
+      "domain": "localhost",
+      "path": "/",
+      "expires": 1705436004.185475,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    }
+  ],
+  "origins": []
+}
